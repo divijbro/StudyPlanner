@@ -1,7 +1,8 @@
 import { initializeApp }
 from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 
-import { getAuth, onAuthStateChanged,
+import { getAuth,
+         onAuthStateChanged,
          EmailAuthProvider,
          reauthenticateWithCredential,
          deleteUser }
@@ -24,21 +25,14 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-let currentUser = null;
-
-
 onAuthStateChanged(auth, (user) => {
-    if (user) {
-        currentUser = user;
-    } else {
+    if (!user) {
         window.location.replace("login.html");
     }
 });
 
-
 const deleteBtn = document.getElementById("deleteBtn1");
 const cancelBtn = document.getElementById("cancelBtn1");
-
 
 if (cancelBtn) {
     cancelBtn.addEventListener("click", () => {
@@ -46,9 +40,16 @@ if (cancelBtn) {
     });
 }
 
-
 if (deleteBtn) {
     deleteBtn.addEventListener("click", async () => {
+
+        const user = auth.currentUser;
+
+        if (!user) {
+            alert("Session expired. Please login again.");
+            window.location.replace("login.html");
+            return;
+        }
 
         const password = document.getElementById("confirmPassword").value;
 
@@ -60,16 +61,15 @@ if (deleteBtn) {
         try {
 
             const credential = EmailAuthProvider.credential(
-                currentUser.email,
+                user.email,
                 password
             );
 
-            await reauthenticateWithCredential(currentUser, credential);
+            await reauthenticateWithCredential(user, credential);
 
-        
-            await deleteDoc(doc(db, "students", currentUser.uid));
+            await deleteDoc(doc(db, "students", user.uid));
 
-            await deleteUser(currentUser);
+            await deleteUser(user);
 
             alert("Account permanently deleted.");
 
