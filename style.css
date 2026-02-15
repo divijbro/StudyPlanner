@@ -1,0 +1,389 @@
+@import "https://fonts.googleapis.com/css?family=Poppins";
+
+/* ===== GLOBAL ===== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Poppins",
+                 "Helvetica Neue", Arial, sans-serif;
+
+    background: linear-gradient(180deg, #1c1c1e, #111113);
+    color: #f5f5f7;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== WRAPPER ===== */
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== BRAND SECTION ===== */
+
+.brand {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 85px;
+    height: auto;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.brand h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* ===== AUTH CARD ===== */
+
+.auth-box {
+    width: 420px;
+    padding: 48px;
+    border-radius: 24px;
+
+    background: rgba(28, 28, 30, 0.85);
+    backdrop-filter: blur(30px);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.6),
+        0 0 0 1px rgba(255,255,255,0.02);
+}
+
+/* ===== TITLE ===== */
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 36px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* ===== INPUT GROUP ===== */
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+/* ===== LABEL ===== */
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #a1a1a6;
+}
+
+/* ===== INPUT ===== */
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background: rgba(44, 44, 46, 0.9);
+    color: white;
+
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0a84ff;
+    box-shadow: 0 0 0 3px rgba(10,132,255,0.25);
+}
+
+/* ===== BUTTON ===== */
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+
+    border-radius: 16px;
+    border: none;
+
+    background: #0a84ff;
+    color: white;
+
+    font-weight: 600;
+    font-size: 14px;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #0071e3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+.dashboard {
+    text-align: center;
+    margin-top: 80px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.timer-card, .stats-card {
+    position: relative;
+    z-index: 1;
+    margin: 30px auto;
+    padding: 30px;
+    width: 400px;
+    border-radius: 20px;
+    background: rgba(28, 28, 30, 0.9);
+    color: white;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+#display {
+    font-size: 48px;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 12px;
+    border: none;
+    background: #0a84ff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0071e3;
+}
+/* ===== Premium Chapter Dropdown ===== */
+
+#chapterSelect {
+    position: relative;
+    z-index: 1000;
+
+    width: 100%;
+    padding: 14px 18px;
+    padding-right: 45px; /* space for arrow */
+
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background: rgba(30, 30, 32, 0.85);
+    backdrop-filter: blur(20px);
+
+    color: #f5f5f7;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* Hover effect */
+#chapterSelect:hover {
+    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+
+/* Focus glow */
+#chapterSelect:focus {
+    outline: none;
+    border-color: #0a84ff;
+    box-shadow:
+        0 0 0 3px rgba(10,132,255,0.25),
+        0 6px 25px rgba(0,0,0,0.5);
+}
+
+/* Custom Arrow */
+#chapterSelect {
+    width: 100%;
+    padding: 14px 18px;
+    padding-right: 40px;
+
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background-color: #2c2c2e;
+    color: #f5f5f7;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23f5f5f7' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px;
+}
+#chapterSelect:hover {
+    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+#chapterSelect:hover {
+    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+
+
+
+.danger-btn {
+    position: fixed;
+    top: 18px;
+    right: 22px;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255, 59, 48, 0.4);
+
+    background: transparent;
+    color: #ff453a;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
+}
+
+
+.danger-btn:hover {
+    background: rgba(255, 59, 48, 0.12);
+    border-color: rgba(255, 59, 48, 0.7);
+}
+.delete-container {
+    max-width: 420px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.warning-text {
+    color: #ff453a;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+#confirmPassword {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(44, 44, 46, 0.9);
+    color: white;
+}
+
+.danger-btn1 {
+    background: #ff3b30;
+    margin-top: 15px;
+}
+
+.cancel-btn1 {
+    margin-top: 10px;
+    background: #444;
+}
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.welcome-text {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+/* ===== Custom Dropdown ===== */
+
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dropdown-selected {
+    padding: 14px 18px;
+    border-radius: 16px;
+    background: rgba(30, 30, 32, 0.9);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: white;
+    transition: 0.2s ease;
+}
+
+.dropdown-selected:hover {
+    border-color: rgba(255,255,255,0.2);
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    right: 0;
+
+    background: rgba(25,25,28,0.95);
+    border-radius: 14px;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: 0.25s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+.dropdown-options.active {
+    max-height: 300px;
+    padding: 8px 0;
+}
+
+.dropdown-option {
+    padding: 12px 16px;
+    transition: 0.2s ease;
+}
+
+.dropdown-option:hover {
+    background: rgba(255,255,255,0.08);
+}
